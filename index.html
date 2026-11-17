@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ayano Direct | Evaluatie maand 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#170e2b;}
+.deck{display:flex;flex-direction:column;align-items:center;gap:24px;padding:24px 0;}
+.frame{position:relative;overflow:hidden;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.35);}
+.frame>section{position:absolute;left:0;top:0;width:1920px;height:1080px;box-sizing:border-box;transform-origin:0 0;overflow:hidden;}
+section *{margin:0;box-sizing:border-box;}
+section table{border-collapse:collapse;}
+section .tbl td{border-top:1px solid #e7ebf6;vertical-align:top;}
+:root {
+  --ink-900: #1f1144;
+  --ink-800: #25114e;
+  --ink-500: #55536b;
+  --purple-500: #5a46ff;
+  --mint-400: #5deed4;
+  --grey-500: #8a93ac;
+  --grey-200: #e7ebf6;
+  --grey-150: #f0f3fc;
+  --green-600: #0e9e77;
+  --amber-600: #a37817;
+  --rose-500: #f5356b;
+}
+body { font-family: 'Plus Jakarta Sans', Arial, sans-serif; color: #1f1144; }
+section {
+  counter-increment: page;
+  padding: 128px 128px 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: #1f1144;
+  background: linear-gradient(140deg, #ffffff 0%, #f1f0fe 38%, #f1f4fb 68%, #e5f4f9 100%);
+}
+section.dark {
+  color: #ffffff;
+  background: radial-gradient(ellipse at 78% 8%, #3a2560 0%, #251549 38%, #1f1144 62%, #170e2b 100%);
+}
+section.cover { justify-content: center; gap: 28px; }
+.head { display: flex; flex-direction: column; gap: 16px; }
+.eyebrow { font-size: 24px; font-weight: 700; letter-spacing: 4.1px; color: #5a46ff; }
+section.dark .eyebrow { color: #5deed4; }
+.title { font-size: 64px; font-weight: 800; line-height: 1.08; letter-spacing: -0.02em; color: #1f1144; }
+section.dark .title { color: #ffffff; }
+.hero { font-size: 130px; font-weight: 800; line-height: 1.0; letter-spacing: -0.03em; color: #ffffff; }
+.lead { font-size: 28px; line-height: 1.4; color: #55536b; }
+section.dark .lead { color: rgba(255,255,255,0.72); }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 26px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.card {
+  background: #ffffff;
+  border: 1px solid #e7ebf6;
+  border-radius: 24px;
+  box-shadow: 0 2px 3px #1f11440a, 0 12px 36px #1f11440d;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.card.purple { background: #5a46ff; border: 1px solid #5a46ff; box-shadow: 0 12px 34px rgba(90,70,255,0.28); }
+.card.ink { background: #25114e; border: 1px solid rgba(255,255,255,0.10); box-shadow: none; }
+.rule { width: 33px; height: 4px; border-radius: 2px; background: #5a46ff; }
+.card.purple .rule, .card.ink .rule { background: #5deed4; }
+.card .ctitle { font-size: 32px; font-weight: 800; line-height: 1.2; color: #1f1144; }
+.card.purple .ctitle, .card.ink .ctitle { color: #ffffff; }
+.card .ctext { font-size: 24px; line-height: 1.45; color: #55536b; }
+.card.purple .ctext, .card.ink .ctext { color: rgba(255,255,255,0.82); }
+.card .stat { font-size: 74px; font-weight: 800; line-height: 1.02; letter-spacing: -0.03em; color: #1f1144; }
+.card.purple .stat { color: #ffffff; }
+.card .clist { font-size: 24px; line-height: 1.45; color: #55536b; padding-left: 32px; }
+.card.ink .clist { color: rgba(255,255,255,0.82); }
+.foot { position: absolute; left: 128px; bottom: 64px; width: 1664px; display: flex; justify-content: space-between; }
+.fnote { font-size: 24px; color: #8a93ac; }
+section.dark .fnote { color: rgba(255,255,255,0.58); }
+.tablewrap { overflow: hidden; border-radius: 24px; box-shadow: 0 2px 3px #1f11440a, 0 12px 36px #1f11440d; }
+.tbl { width: 100%; font-family: 'Plus Jakarta Sans', Arial, sans-serif; font-size: 24px; color: #1f1144; background: #ffffff; }
+.tbl th, .tbl td { padding: 13px 22px; }
+.tbl th { color: #ffffff; text-align: left; font-weight: 700; }
+.tbl .hd { background: #1f1144; }
+.tbl .tot { background: #f0f3fc; }
+.tbl .ok { color: #0e9e77; }
+.tbl .wait { color: #a37817; }
+.tbl .bad { color: #f5356b; }
+.tbl .num { text-align: right; }
+
+@media print{html,body{background:none}.deck{padding:0;gap:0}.frame{border-radius:0;box-shadow:none;page-break-after:always}}
+@page{size:1920px 1080px;margin:0}
+</style></head><body><div class="deck">
+<div class="frame"><section id="cover" class="dark cover">
+<p class="eyebrow">Evaluatie maand 1 van de pilot</p>
+<h1 class="hero">Ayano Direct</h1>
+<p class="lead">Google Ads in België, 15 oktober tot en met 17 november 2026</p>
+<div class="foot"><p class="fnote">Aizy, 17 november 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="bevindingen">
+<div class="head">
+<p class="eyebrow">Jullie beeld</p>
+<h2 class="title">Wat merken jullie en het team?</h2>
+<p class="lead">Google Ads ziet alleen wat op de site gebeurt. Jullie zien de telefoontjes, de mails en de klanten zelf. Dat hoort in deze evaluatie.</p>
+</div>
+<div class="grid2">
+<div class="card"><div class="rule"></div><h3 class="ctitle">Aantallen</h3>
+<ul class="clist">
+<li>Kwamen er sinds 15 oktober meer bestellingen en offertes binnen dan normaal?</li>
+<li>Hoeveel aanvragen kwamen per telefoon of mail?</li>
+<li>Kwamen de vier webshopbestellingen van nieuwe klanten?</li>
+</ul></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Kwaliteit</h3>
+<ul class="clist">
+<li>Waren het zakelijke klanten of vooral particulieren?</li>
+<li>Over welke producten en oplages ging het?</li>
+<li>Noemden klanten dat ze via Google kwamen?</li>
+<li>Wat valt het team verder op, positief of negatief?</li>
+</ul></div>
+</div>
+<div class="foot"><p class="fnote">Aizy, 17 november 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="kickoff">
+<div class="head">
+<p class="eyebrow">Terug naar de kick-off van 5 oktober</p>
+<h2 class="title">Wat jullie belangrijk vonden</h2>
+</div>
+<div class="grid3">
+<div class="card"><div class="rule"></div><h3 class="ctitle">Bewijzen dat het werkt</h3><p class="ctext">Pilot van 3 maanden, € 2.500 per maand. Geslaagd is meer verkeer en meer aanvragen.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">5 tot 15 aanvragen</h3><p class="ctext">Per maand, bestellingen en offertes samen. Jullie verwachting aan het eind van de pilot: 15 tot 25.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Zakelijk, in België</h3><p class="ctext">Bedrijven en horeca in Vlaanderen, Wallonië en Brussel. Niet concurreren met de Nederlandse wederverkopers.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Waarde op lange termijn</h3><p class="ctext">Een klant is gemiddeld € 1.500 per jaar waard, en 70% van de offerteaanvragen wordt klant.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Wijn en champagne</h3><p class="ctext">Richting de feestdagen meer focus op wijn- en champagneglazen.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Zicht op nieuwe klanten</h3><p class="ctext">Weten welke bestellingen van een nieuw bedrijf komen.</p></div>
+</div>
+<div class="foot"><p class="fnote">Bron: kick-off 5 oktober 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="scorekaart">
+<div class="head">
+<p class="eyebrow">Scorekaart na een maand</p>
+<h2 class="title">Hoe staan we ervoor op de doelen?</h2>
+</div>
+<div class="tablewrap">
+<table class="tbl">
+<tr class="hd"><th style="width:28%">Doel</th><th style="width:52%">Stand na een maand</th><th style="width:20%">Status</th></tr>
+<tr><td>Meer verkeer</td><td>380.000 keer getoond, 2.826 keer aangeklikt</td><td class="ok">Op koers</td></tr>
+<tr><td>5 tot 15 aanvragen</td><td>6 gemeten: 4 bestellingen en 2 contactaanvragen</td><td class="wait">Ondergrens gehaald</td></tr>
+<tr><td>Met mail en telefoon</td><td>24: daarbij 18 keer gebeld of gemaild via de site of advertentie (9 telefoon, 8 e-mail, 1 oproep)</td><td class="ok">Boven het doel, als er echt contact volgde</td></tr>
+<tr><td>Budget € 2.500</td><td>€ 2.172 besteed (87%), rustig opgebouwd</td><td class="ok">Op koers</td></tr>
+<tr><td>Zakelijk, in België</td><td>Alleen België; geen advertentie meer bij ruim 500 particuliere zoekopdrachten</td><td class="ok">Op koers</td></tr>
+<tr><td>Wijn en champagne</td><td>327 klikken op productadvertenties van wijn- en champagneglazen</td><td class="wait">Loopt, opschalen</td></tr>
+<tr><td>Nieuwe klanten</td><td>Nog niet zichtbaar in de meting van bestellingen</td><td class="wait">Wacht op de site</td></tr>
+<tr><td>Offertes meten</td><td>Er is nog geen offerteformulier op de site. Dit is de grootste rem op de campagnes.</td><td class="bad">Must, open</td></tr>
+</table>
+</div>
+<div class="foot"><p class="fnote">Bron: Google Ads, 15 okt t/m 17 nov 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="cijfers">
+<div class="head">
+<p class="eyebrow">Resultaten</p>
+<h2 class="title">De eerste maand in cijfers</h2>
+</div>
+<div class="grid3">
+<div class="card"><div class="rule"></div><p class="stat">€ 2.172</p><p class="ctext">uitgegeven, gemiddeld € 70 per dag (budget € 82)</p></div>
+<div class="card"><div class="rule"></div><p class="stat">2.826</p><p class="ctext">klikken naar de webshop, gemiddeld € 0,77 per klik</p></div>
+<div class="card"><div class="rule"></div><p class="stat">4</p><p class="ctext">webshopbestellingen, samen € 2.356 omzet excl. btw</p></div>
+<div class="card"><div class="rule"></div><p class="stat">2</p><p class="ctext">contactaanvragen via het formulier op de site</p></div>
+<div class="card"><div class="rule"></div><p class="stat">18</p><p class="ctext">klikken op jullie telefoonnummer of e-mailadres. Of er echt contact volgde, zien we niet.</p></div>
+<div class="card purple"><div class="rule"></div><p class="stat">€ 362</p><p class="ctext">per aanvraag: € 2.172 gedeeld door 4 bestellingen en 2 contactaanvragen. Met de 18 keer bellen of mailen erbij: € 91 per contact.</p></div>
+</div>
+<div class="foot"><p class="fnote">Bron: Google Ads, 15 okt t/m 17 nov 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="perspectief">
+<div class="head">
+<p class="eyebrow">Kosten tegenover waarde</p>
+<h2 class="title">Kosten per aanvraag tegenover de waarde</h2>
+</div>
+<div class="grid3">
+<div class="card"><div class="rule"></div><p class="stat">€ 362</p><p class="ctext">kost nu een aanvraag die we via Google Ads zien: een bestelling of contactaanvraag. Met bellen en mailen erbij is dat € 91 per contact: dan is het al terugverdiend als 1 op de 16 contacten klant wordt.</p></div>
+<div class="card"><div class="rule"></div><p class="stat">€ 1.500</p><p class="ctext">is een klant gemiddeld per jaar waard. 70% van de offerteaanvragen wordt klant.</p></div>
+<div class="card purple"><div class="rule"></div><p class="stat">€ 4.456</p><p class="ctext">rekenvoorbeeld: € 2.356 uit de bestellingen, plus 2 aanvragen × 70% × € 1.500 per jaar.</p></div>
+</div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Kanttekening: we zien niet alles</h3><p class="ctext">Bestellingen en offertes die per telefoon of mail binnenkomen, en herhaalbestellingen later, ziet Google Ads niet. Of de vier bestellingen van nieuwe klanten komen, weten we nog niet. Jullie eigen cijfers maken het beeld compleet.</p></div>
+<div class="foot"><p class="fnote">Bron: Google Ads, 15 okt t/m 17 nov 2026; klantwaarde uit de kick-off</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="ga4">
+<div class="head">
+<p class="eyebrow">Het totaalbeeld in Google Analytics (GA4)</p>
+<h2 class="title">België groeit hard sinds de start</h2>
+</div>
+<div class="grid3">
+<div class="card purple"><div class="rule"></div><p class="stat">4×</p><p class="ctext">zoveel bezoeken uit België: 1.690, tegen 408 in de maand ervoor</p></div>
+<div class="card"><div class="rule"></div><p class="stat">7×</p><p class="ctext">zoveel nieuwe bezoekers uit België: 1.297, tegen 184. Bedrijven die Ayano nog niet kenden.</p></div>
+<div class="card"><div class="rule"></div><p class="stat">3,7×</p><p class="ctext">zoveel bezoeken waarin echt gekeken wordt: 1.102, tegen 301</p></div>
+</div>
+<div class="grid2">
+<div class="card"><div class="rule"></div><h3 class="ctitle">10 bestellingen uit België</h3><p class="ctext">Samen € 4.638 excl. btw. Daarvan kwamen er 3 direct na een klik op een advertentie. De rest kwam vaak later terug, rechtstreeks of via Google.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">De webshop als geheel</h3><p class="ctext">41 bestellingen, € 26.935 excl. btw. Het grootste deel komt uit Nederland (27 bestellingen, € 19.624), waar we bewust niet adverteren.</p></div>
+</div>
+<div class="foot"><p class="fnote">Bron: GA4, 15 okt t/m 17 nov 2026 tegenover 11 sep t/m 14 okt</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="campagnes">
+<div class="head">
+<p class="eyebrow">Per campagne</p>
+<h2 class="title">Resultaat per campagne</h2>
+<p class="ctext" style="font-size:24px; line-height:1.4; color:#55536b">Shopping = advertenties met productfoto en prijs. Tel/mail = een klik op jullie telefoonnummer of e-mailadres.</p>
+</div>
+<div class="tablewrap">
+<table class="tbl">
+<tr class="hd"><th style="width:30%">Campagne</th><th style="width:11%" class="num">Kosten</th><th style="width:11%" class="num">Klikken</th><th style="width:11%" class="num">Per klik</th><th style="width:37%">Resultaat</th></tr>
+<tr><td>Zoeken op ‘Ayano’ (NL)</td><td class="num">€ 72</td><td class="num">138</td><td class="num">€ 0,52</td><td>1 bestelling (€ 1.108), 5× tel/mail</td></tr>
+<tr><td>Zoeken op ‘Ayano’ (FR)</td><td class="num">€ 29</td><td class="num">40</td><td class="num">€ 0,72</td><td>3× tel/mail</td></tr>
+<tr><td>Glazen bedrukken</td><td class="num">€ 399</td><td class="num">256</td><td class="num">€ 1,56</td><td>1 contactaanvraag, 2× tel/mail</td></tr>
+<tr><td>Bierglazen</td><td class="num">€ 317</td><td class="num">208</td><td class="num">€ 1,52</td><td>2 bestellingen (€ 840)</td></tr>
+<tr><td>Flessen &amp; herbruikbaar</td><td class="num">€ 220</td><td class="num">108</td><td class="num">€ 2,04</td><td class="bad">Nog geen resultaat</td></tr>
+<tr><td>Verres personnalisés (FR)</td><td class="num">€ 344</td><td class="num">317</td><td class="num">€ 1,09</td><td>1 contactaanvraag, 2× telefoon</td></tr>
+<tr><td>Shopping NL</td><td class="num">€ 557</td><td class="num">1.250</td><td class="num">€ 0,45</td><td>1 bestelling (€ 408), 4× tel/mail</td></tr>
+<tr><td>Shopping FR</td><td class="num">€ 235</td><td class="num">509</td><td class="num">€ 0,46</td><td>2× tel/mail</td></tr>
+<tr class="tot"><td>Totaal</td><td class="num">€ 2.172</td><td class="num">2.826</td><td class="num">€ 0,77</td><td>4 bestellingen, 2 aanvragen, 18× contact</td></tr>
+</table>
+</div>
+<div class="foot"><p class="fnote">Bron: Google Ads, 15 okt t/m 17 nov 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="learnings">
+<div class="head">
+<p class="eyebrow">Wat we leren</p>
+<h2 class="title">Zes dingen die we na een maand weten</h2>
+</div>
+<div class="grid3">
+<div class="card"><div class="rule"></div><h3 class="ctitle">Wie Ayano kent, koopt</h3><p class="ctext">Advertenties voor wie op ‘Ayano’ zoekt: € 101 kosten, de grootste bestelling (€ 1.108).</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Shopping trekt verkeer</h3><p class="ctext">Advertenties met productfoto en prijs: 62% van alle klikken, voor € 0,45 per klik.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Veel particulieren</h3><p class="ctext">Veel zoekers willen één glas laten graveren. Daarbij tonen we geen advertentie meer.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Klikken goedkoper</h3><p class="ctext">Van € 0,94 per klik in week 1 naar € 0,74 in week 4, bij bijna dubbel zoveel klikken.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">86% klikt op mobiel</h3><p class="ctext">Een offerte aanvragen moet dus ook op de telefoon snel en makkelijk gaan.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Flessen blijft achter</h3><p class="ctext">€ 220 zonder resultaat, met de duurste klikken (€ 2,04). Het budget is al gehalveerd.</p></div>
+</div>
+<div class="foot"><p class="fnote">Bron: Google Ads, 15 okt t/m 17 nov 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="offertemodule" class="dark">
+<div class="head">
+<p class="eyebrow">De belangrijkste volgende stap</p>
+<h2 class="title">Een offertemodule op de site is een must</h2>
+<p class="lead">Zonder offerteformulier kan Google niet leren wie een offerte aanvraagt. Dan sturen de campagnes op klikken en bestellingen, terwijl het grootste deel van jullie omzet uit offertes komt.</p>
+</div>
+<div class="grid3">
+<div class="card purple"><div class="rule"></div><p class="stat">± 90%</p><p class="ctext">van de omzet komt uit offertes: ± € 1,1 mln van ± € 1,2 mln, en 70% van de offertes wordt een order.</p></div>
+<div class="card ink"><div class="rule"></div><h3 class="ctitle">Te weinig om van te leren</h3><p class="ctext">Nu ziet Google 6 aanvragen per maand. Met offertes erbij komen er meer en betere signalen, zodat Google gericht zoekt naar bedrijven die een offerte aanvragen.</p></div>
+<div class="card ink"><div class="rule"></div><h3 class="ctitle">Wat de module nodig heeft</h3>
+<ul class="clist">
+<li>Formulier in het Nederlands en Frans</li>
+<li>Product, aantal, bedrukking en logo-upload</li>
+<li>Snel in te vullen op mobiel (86% van de klikken)</li>
+<li>Eigen bedankpagina na het versturen</li>
+</ul></div>
+</div>
+<div class="foot"><p class="fnote">Bron: kick-off 5 oktober 2026; Google Ads, 15 okt t/m 17 nov 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="offline">
+<div class="head">
+<p class="eyebrow">Voorstel voor een test</p>
+<h2 class="title">Orders terugkoppelen aan Google Ads</h2>
+</div>
+<div class="grid3">
+<div class="card"><div class="rule"></div><h3 class="ctitle">1. Het formulier onthoudt de klik</h3><p class="ctext">Bij elke aanvraag slaat het formulier onzichtbaar op van welke advertentie iemand kwam, samen met het e-mailadres.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">2. Jullie houden de uitkomst bij</h3><p class="ctext">Welke offerte werd een order, en voor welk bedrag? Een export uit jullie offertesysteem of een simpele lijst per week is genoeg.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">3. Wij sturen het terug</h3><p class="ctext">Wij zetten de orders terug in Google Ads. Zo leert Google welke klikken echte omzet opleveren, ook als de deal per telefoon of mail rondkomt.</p></div>
+</div>
+<div class="card purple"><div class="rule"></div><h3 class="ctitle">Test van 6 weken, zodra de offertemodule live staat</h3><p class="ctext">Daarna kijken we samen of de aanvragen beter worden. Wat we van jullie nodig hebben: in welk systeem jullie offertes bijhouden, en een regel in de privacyverklaring dat deze gegevens met Google gedeeld worden.</p></div>
+<div class="foot"><p class="fnote">Aizy, voorstel 17 november 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="gedaan">
+<div class="head">
+<p class="eyebrow">Wat we deden</p>
+<h2 class="title">Wat we de afgelopen maand hebben gedaan</h2>
+</div>
+<div class="grid2">
+<div class="card"><div class="rule"></div><h3 class="ctitle">Vóór de livegang</h3>
+<ul class="clist">
+<li>Meting van bestellingen, het contactformulier, klikken op telefoon en e-mail, winkelwagen en afrekenen</li>
+<li>Alle producten klaargezet voor Google Shopping, in het Nederlands en Frans, met verzending en retourbeleid</li>
+<li>8 campagnes in het Nederlands en Frans, alleen voor mensen die in België zijn</li>
+<li>Advertenties aangevuld met links, prijzen, logo en belknop</li>
+</ul></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Sinds 15 oktober</h3>
+<ul class="clist">
+<li>Wekelijks gekeken waarop mensen zochten: bij ruim 500 particuliere of irrelevante zoekopdrachten tonen we geen advertentie meer</li>
+<li>De minimale afname (bijv. vanaf 36 stuks) vast in beeld in de advertenties</li>
+<li>Zakelijke zoekwoorden toegevoegd: horeca, bedrijf, brouwerij, evenement</li>
+<li>Link ‘Offerte aanvragen’ onder alle zoekadvertenties</li>
+<li>Budget van Flessen naar Shopping verschoven, en een maximumprijs per klik ingesteld toen een klik soms € 3,65 kostte</li>
+</ul></div>
+</div>
+<div class="foot"><p class="fnote">Bron: wijzigingen in Google Ads en Merchant Center</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="nodig">
+<div class="head">
+<p class="eyebrow">Samen</p>
+<h2 class="title">Wat er nog openstaat aan jullie kant</h2>
+</div>
+<div class="tablewrap">
+<table class="tbl">
+<tr class="hd"><th style="width:40%">Wat</th><th style="width:60%">Waarom</th></tr>
+<tr><td><b>Must: offertemodule met formulier, in het Nederlands en Frans</b></td><td>Het grootste deel van de omzet komt uit offertes. Met een eigen bedankpagina na het versturen zien we welke advertentie een offerte opleverde, en leert Google daarop te sturen.</td></tr>
+<tr><td>Per week de offertes die order werden, met bedrag</td><td>Voor de test met terugkoppeling naar Google Ads: dan stuurt Google op offertes die omzet opleveren.</td></tr>
+<tr><td>Jullie ontwikkelaar laat bij elke bestelling meesturen of het een nieuwe klant is</td><td>Zo zien we hoeveel nieuwe bedrijven de campagnes opleveren, een van de doelen uit de kick-off.</td></tr>
+<tr><td>Verkoop- en offertecijfers van vóór de pilot, bijv. oktober en november vorig jaar</td><td>Dan zien we hoeveel van de groei in België door de campagnes komt en hoeveel door het seizoen.</td></tr>
+</table>
+</div>
+<div class="foot"><p class="fnote">Bron: afspraken kick-off en briefing ontwikkelaar</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="komend">
+<div class="head">
+<p class="eyebrow">Maand 2</p>
+<h2 class="title">Wat we de komende maand doen</h2>
+</div>
+<div class="grid3">
+<div class="card purple"><div class="rule"></div><h3 class="ctitle">Feestdagen</h3><p class="ctext">Meer budget en aandacht voor wijn- en champagneglazen, met de uiterste besteldatum voor levering in de advertenties.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Budget naar wat werkt</h3><p class="ctext">Glazen bedrukken en Verres personnalisés stoppen soms omdat het dagbudget op is. Die krijgen meer.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Meer zakelijke zoekers</h3><p class="ctext">Uitbreiden met zoekwoorden rond logo, horeca en relatiegeschenken voor het eindejaar.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Besluit over Flessen</h3><p class="ctext">Nog twee weken kans. Zonder resultaat pauzeren we de campagne en gaat het budget naar Shopping.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Sturen op offertes</h3><p class="ctext">Zodra de offertemodule live staat, sturen we op aanvragen en starten we de test met orders terugkoppelen.</p></div>
+<div class="card"><div class="rule"></div><h3 class="ctitle">Shopping goedkoper</h3><p class="ctext">Via Channable (€ 29 per maand) kan een klik op een productadvertentie tot 20% goedkoper. Dat rekenen we door.</p></div>
+</div>
+<div class="foot"><p class="fnote">Aizy, plan 17 november tot 15 december 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+<div class="frame"><section id="voorstel" class="dark">
+<div class="head">
+<p class="eyebrow">Doel bijstellen, zoals afgesproken</p>
+<h2 class="title">Voorstel voor maand 2</h2>
+</div>
+<div class="grid2">
+<div class="card ink"><div class="rule"></div><h3 class="ctitle">Doel</h3>
+<ul class="clist">
+<li>Minimaal 8 gemeten aanvragen: bestellingen plus offerte- en contactaanvragen</li>
+<li>Kosten per aanvraag rond € 300 (nu € 362)</li>
+<li>Klikken op telefoonnummer en e-mailadres houden we apart bij</li>
+<li>Het volledige budget van € 82 per dag benutten</li>
+</ul></div>
+<div class="card ink"><div class="rule"></div><h3 class="ctitle">Vragen aan jullie</h3>
+<ul class="clist">
+<li>Wanneer staat de offertemodule live?</li>
+<li>In welk systeem houden jullie offertes bij, voor de test met terugkoppeling?</li>
+<li>Tot wanneer kan er besteld worden voor levering vóór de feestdagen?</li>
+</ul></div>
+</div>
+<div class="card purple"><div class="rule"></div><h3 class="ctitle">Nog open: betaling Google Ads</h3><p class="ctext">Er moet nog een betaling voor Google Ads worden uitgevoerd, zodat de campagnes blijven lopen.</p></div>
+<div class="foot"><p class="fnote">Aizy, 17 november 2026</p><p class="fnote">tryaizy.com</p></div>
+</section></div>
+</div>
+<script>
+const frames=[...document.querySelectorAll('.frame')];
+function fit(){const w=Math.min(window.innerWidth-32,1600);const k=w/1920;
+ for(const f of frames){f.style.width=w+'px';f.style.height=(1080*k)+'px';f.firstElementChild.style.transform='scale('+k+')';}}
+addEventListener('resize',fit);fit();
+addEventListener('keydown',e=>{const keys={ArrowRight:1,ArrowDown:1,PageDown:1,' ':1,ArrowLeft:-1,ArrowUp:-1,PageUp:-1};
+ if(!(e.key in keys))return;e.preventDefault();
+ const mid=innerHeight/2;let cur=frames.findIndex(f=>{const r=f.getBoundingClientRect();return r.top<=mid&&r.bottom>=mid});
+ if(cur<0)cur=0;const n=Math.max(0,Math.min(frames.length-1,cur+keys[e.key]));frames[n].scrollIntoView({behavior:'smooth',block:'center'});});
+</script></body></html>
